@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <title>Rapunzel Music Videos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mstyle.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Princess Rapunzel Logo" style="height: 50px;">
+        <span>PRINCESS RAPUNZEL</span>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" ><i class="fa fa-home"></i> HOME</a></li>
+            <li><a href="biography.html" ><i class="fa fa-user"></i> BIOGRAPHY</a></li>
+            <li><a href="music.html"><i class="fa fa-music"></i> MUSIC VIDEOS</a></li>
+            <li><a href="family-tree.html"><i class="fa fa-sitemap"></i> FAMILY TREE</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="hero">
+        <h1>Princess Rapunzel <br>Musical Videos</h1>
+    </section>
+
+    <div class="about-music-container">
+        <section class="abouta">
+            <div style="position: relative;">
+                <img src="images/rap.png" alt="Princess Rapunzel">
+                <i class="fa fa-music music-icon"></i>
+            </div>
+            <div>
+                <h2>Rapunzel's Magical Songs</h2>
+                <p style="font-family: 'Poppins', sans-serif; font-size: 20px;">Rapunzel's songs are melodic, heartfelt, dreamy, uplifting, enchanting, playful, hopeful, gentle, whimsical, innocent, lyrical, joyful, soulful, radiant, and filled with yearning.</p>
+            </div>
+        </section>
+
+        <section class="cards">
+            <div class="card" onclick="confirmAlbumAccess('https://youtu.be/kRXmAIHYQR4?si=qdegZsjb8dAq3EiZ')">
+                <h3>Album 1</h3>
+                <img src="images/album1.jpg" alt="Album 1">
+                <p>When Will My Life Begin</p>
+            </div>
+            <div class="card" onclick="confirmAlbumAccess('https://youtu.be/ILRs2r6lcHY?si=wn6fdjfWqJBB0f0D')">
+                <h3>Album 2</h3>
+                <img src="images/album2.jpg" alt="Album 2">
+                <p>I See the Light</p>
+            </div>
+        </section>
+    </div>
+</div>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/TangledRapunzel/" class="social-icon"><i class="fa fa-facebook"></i></a>
+        <a href="https://x.com/sundroplight" class="social-icon"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/disney._rapunzel._/?hl=en" class="social-icon"><i class="fa fa-instagram"></i></a>
+    </div>
+    &copy; 2025 Princess Rapunzel. All Rights Reserved.
+</footer>
+
+<div class="confirmation-box" id="confirmationBox">
+    <p>Are you sure you want to open this album?</p>
+    <button onclick="proceedNavigation()">Yes</button>
+    <button onclick="cancelNavigation()">No</button>
+</div>
+
+<script>
+    let targetUrl = '';
+
+    function confirmAlbumAccess(url) {
+        targetUrl = url;
+        document.getElementById('confirmationBox').style.display = 'block';
+    }
+
+    function proceedNavigation() {
+        window.open(targetUrl, '_blank');
+        document.getElementById('confirmationBox').style.display = 'none';
+    }
+
+    function cancelNavigation() {
+        document.getElementById('confirmationBox').style.display = 'none';
+    }
+
+   
+</script>
+
+</body>
+</html>
